@@ -5,13 +5,13 @@ body {
     background-color: #f4f4f4; /* Light gray background */
     color: #333; /* Dark gray text */
     line-height: 1.6; /* Improve readability */
-    background-image: url('1206.jpg');
+    background-image: url('clients-58.jpg');
     background-size:cover;
     background-position:center;
     background-attachment: fixed; /* Fixed background image */
     background-repeat: no-repeat; /* Prevent background image from repeating */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
-    
+
 }
 header {
     background-color: #333; /* Dark background for the header */
