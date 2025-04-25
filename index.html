@@ -6,11 +6,12 @@
     <title>Hélder Fernandes | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
 
     <header>
+        <div class="menu-icon">&#9776;</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -20,21 +21,44 @@
         </nav>
     </header>
 
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a simple HTML document.</p>
-        
+    <main>
+        <section id="home">
+            <h1>Welcome to My Web Page</h1>
+            <p>This is a simple HTML document.  This will be the home section</p>
+        </section>
+
+        <section id="about">
+            <h2>Projects</h2>
+            <p>This section will showcase my projects.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>You can reach me via the links below.</p>
+        </section>
+    </main>
+
 
     <footer>
         <span>© 2025 Hélder Fernandes. All rights reserved.</span>
         <br>
-        <span><a href="https://helderhub.github.io">Portfolio</a></span>
+        <span><a href="https://helderhub.netlify.app">Portfolio</a></span>
         <span> | </span>
         <span><a href="mailto:helderfernandeswork@gmail.com">Contact</a></span>
         <span> | </span>
         <span>
-            <a aria-label="linkedin" href="https://linkedin.com/in/helderfernandes101" target="_blank">LinkedIn</a> |
-            <a aria-label="github" href="https://github.com/helderhub" target="_blank">GitHub</a>
+            <a aria-label="linkedin" href="https://linkedin.com/in/helderfernandes101" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+            <a aria-label="github" href="https://github.com/helderhub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </span>
     </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navUl = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
