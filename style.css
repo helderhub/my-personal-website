@@ -1,21 +1,87 @@
-header {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A clean, modern font */
+    margin: 0; /* Remove default body margin */
+    padding-bottom: 60px; /* Add padding at the bottom to accommodate the fixed footer */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6; /* Improve readability */
+    background-image: url('1206.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed; /* Fixed background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
     
 }
-
-nav {
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white; /* White text in the header */
+    padding: 1em 0; /* Vertical padding */
+    text-align: center; /* Center the navigation */
 }
 
-body {
+nav ul {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+    margin: 0; /* Remove default margin from the list */
+    display: inline-block; /* Allows the nav to be centered */
+}
 
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin: 0 15px; /* Add spacing between navigation links */
+}
+
+nav a {
+    color: white; /* White link text */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold; /* Make the links a bit bolder */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #ddd; /* Slightly lighter color on hover */
+}
+
+h1 {
+    text-align: center; /* Center the main heading */
+    margin-top: 2em; /* Add some space above the heading */
+    color: #333; /* Dark heading text */
+}
+
+p {
+    text-align: center; /* Center the paragraph text */
+    color: #555; /* Slightly lighter text for the paragraph */
+    margin-bottom: 2em; /* Add some space below the paragraph */
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* White text in the footer */
+    text-align: center; /* Center the footer content */
+    padding: 10px; /* Add some padding */
+    position: fixed; /* Keep the footer at the bottom of the viewport */
+    width: 100%; /* Make the footer span the entire width */
+    bottom: 0; /* Stick it to the bottom */
+    font-size: 0.9em; /* Slightly smaller font size for the footer */
 }
 
+footer a {
+    color: white; /* White link color in the footer */
+    text-decoration: none; /* Remove underlines */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+footer a:hover {
+    color: #ddd; /* Slightly lighter color on hover */
+}
+
+footer span {
+    margin: 0 5px; /* Add some spacing between footer links/text */
+}
+img {
+    max-width: 200px; /* Make images responsive */
+    height: 200px; /* Maintain aspect ratio */
+    display: block; /* Make images block elements */
+    margin: 0 auto; /* Center the images */
+}
