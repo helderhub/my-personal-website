@@ -42,4 +42,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Responsive Navigation
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteHeader = document.querySelector('.site-header');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && siteHeader && navMenu) {
+        navToggle.addEventListener('click', () => {
+            const isNavOpen = siteHeader.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isNavOpen);
+        });
+
+        const closeMenu = () => {
+            siteHeader.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        // Close menu if clicking outside the header
+        document.addEventListener('click', (event) => {
+            if (siteHeader.classList.contains('nav-open') && !siteHeader.contains(event.target)) {
+                closeMenu();
+            }
+        });
+    } else {
+        console.error("Nav elements (.nav-toggle, .site-header, .nav-menu) missing.");
+    }
+
 });
