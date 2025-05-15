@@ -83,4 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Footer Year
+    const yearDisplayElement = document.getElementById('current-year');
+    if (yearDisplayElement) yearDisplayElement.textContent = new Date().getFullYear();
+    else console.warn("Element 'current-year' not found.");
 });
