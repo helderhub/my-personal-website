@@ -409,3 +409,38 @@ a:focus-visible {
     color: var(--accent-color);
 }
 
+/* --- Buttons (CTA) --- */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--color-primary);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease, transform 0.2s ease, box-shadow var(--transition-speed) ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--secondary-accent-color);
+    border-color: var(--secondary-accent-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+.cta-button i.fa-github {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
