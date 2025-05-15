@@ -671,3 +671,105 @@ a:focus-visible {
     text-align: center;
     margin-top: 2rem;
 }
+
+/* --- Contact Section --- */
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-section>.container>h2+p {
+    text-align: center;
+    max-width: 650px;
+    margin: -1.5rem auto 2rem auto;
+    font-size: 1.05rem;
+    color: var(--text-muted-color);
+    line-height: 1.8;
+}
+
+.contact-form-container {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border: 1px solid var(--current-border-color);
+    transition: background-color var(--transition-theme) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+#contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+#contact-form label {
+    font-weight: 500;
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+    transition: color var(--transition-theme) ease;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--current-border-color);
+    border-radius: var(--radius);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-theme) ease, color var(--transition-theme) ease, box-shadow var(--transition-speed) ease;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--current-focus-glow-color);
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: var(--text-muted-color);
+    opacity: 0.7;
+    transition: color var(--transition-theme) ease;
+}
+
+#contact-form button[type="submit"] {
+    justify-self: start;
+    width: auto;
+    cursor: pointer;
+}
+
+/* --- Social Links Section --- */
+
+.social-links {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.social-links a {
+    font-size: 2.2rem;
+    margin: 0 15px;
+    color: var(--text-muted-color);
+    display: inline-block;
+    transition: color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: var(--accent-color);
+    transform: scale(1.15) translateY(-2px);
+}
+
+
