@@ -773,3 +773,123 @@ a:focus-visible {
 }
 
 
+
+@media (max-width: 768px) {
+    :root {
+        --base-font-size: 15px;
+        --space-unit: 0.9rem;
+        --header-height: 60px;
+    }
+
+    html {
+        font-size: var(--base-font-size);
+        scroll-padding-top: 70px;
+    }
+
+    .section {
+        padding-top: 2.7rem;
+        padding-bottom: 2.7rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 74px;
+        padding-bottom: 1.35rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 250px;
+        background-color: var(--card-color);
+        flex-direction: column;
+        padding: 10px 0;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 16px var(--shadow-color);
+        text-align: right;
+        gap: 0;
+        z-index: 1050;
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+        pointer-events: none;
+        transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+    }
+
+    .nav-open .nav-menu {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+
+    .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid var(--current-border-color);
+    }
+
+    .main-nav li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .hero-profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-role {
+        font-size: 1.6rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.35rem;
+    }
+
+    .social-links a {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    .contact-form-container {
+        padding: 1.35rem 0.9rem;
+    }
+}
