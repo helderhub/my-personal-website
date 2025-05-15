@@ -494,3 +494,22 @@ a:focus-visible {
     margin-top: 1rem;
 }
 
+/* --- About Section --- */
+.about-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.about-content strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
