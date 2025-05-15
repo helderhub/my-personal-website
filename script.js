@@ -70,4 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Nav elements (.nav-toggle, .site-header, .nav-menu) missing.");
     }
 
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            const targetId = this.getAttribute('href');
+            if (targetId.length > 1 && targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    event.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
 });
