@@ -88,4 +88,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearDisplayElement = document.getElementById('current-year');
     if (yearDisplayElement) yearDisplayElement.textContent = new Date().getFullYear();
     else console.warn("Element 'current-year' not found.");
+
+    // Contact Form
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const recipientEmail = "helderfernandeswork@gmail.com";
+
+            const name = nameInput.value.trim();
+            const senderEmail = emailInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (!name || !senderEmail || !message) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const subject = `Contact Form Submission from ${name}`;
+            const body = `Name: ${name}\nEmail: ${senderEmail}\n\nMessage:\n${message}`;
+
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(body);
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+
+            try {
+                window.location.href = mailtoLink;
+            } catch (e) {
+                console.error("Could not open mailto link", e);
+                alert("Could not automatically open your email client. Please copy the details manually or use another contact method.");
+            }
+        });
+    } else {
+        console.warn("Contact form element (#contact-form) not found.");
+    }
 });
