@@ -1,0 +1,96 @@
+
+:root {
+    /* --- Core Colors (HEX) --- */
+    --color-primary: #011e37;
+    --color-accent1: #7fdbca;
+    --color-accent2: #c792ea;
+
+    /* --- Light Theme Colors --- */
+    --color-light-bg: #f8f9fa;
+    --color-light-card: #ffffff;
+    --color-light-text: #212529;
+    --color-light-text-muted: #6c757d;
+    --color-light-shadow: rgba(0, 0, 0, 0.1);
+    --color-light-border: #dfe3e6;
+    --color-light-section-even-bg: #f0f7f6;
+    --color-light-footer-bg: #e9edf0;
+    --color-light-tech-badge-bg: #e0f5f2;
+    --color-light-focus-glow: rgba(127, 219, 202, 0.2);
+
+    /* --- Dark Theme Colors --- */
+    --color-dark-bg: #011e37;
+    --color-dark-card: #0b2b4a;
+    --color-dark-text: #e9ecef;
+    --color-dark-text-muted: #adb5bd;
+    --color-dark-shadow: rgba(255, 255, 255, 0.08);
+    --color-dark-border: #3e4c59;
+    --color-dark-section-even-bg: #032847;
+    --color-dark-footer-bg: #001a2f;
+    --color-dark-tech-badge-bg: #224f49;
+    --color-dark-focus-glow: rgba(127, 219, 202, 0.25);
+
+    /* --- Theme Switching Variables (Defaults to Light Theme) --- */
+    --bg-color: var(--color-light-bg);
+    --card-color: var(--color-light-card);
+    --text-color: var(--color-light-text);
+    --text-muted-color: var(--color-light-text-muted);
+    --heading-color: var(--color-primary);
+    --accent-color: var(--color-accent1);
+    --secondary-accent-color: var(--color-accent2);
+    --shadow-color: var(--color-light-shadow);
+    --header-bg: rgba(248, 249, 250, 0.85);
+
+    /* Variables for switching themes */
+    --current-border-color: var(--color-light-border);
+    --current-section-even-bg: var(--color-light-section-even-bg);
+    --current-footer-bg: var(--color-light-footer-bg);
+    --current-tech-badge-bg: var(--color-light-tech-badge-bg);
+    --current-focus-glow-color: var(--color-light-focus-glow);
+
+    --font-primary: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+    --transition-theme: 0.6s;
+    --base-font-size: 16px;
+    --space-unit: 1rem;
+    --radius: 6px;
+    --header-height: 70px;
+    --content-width: 1100px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
+    scroll-padding-top: 80px;
+}
+
+html[lang] {
+    line-height: 1.7;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-theme) ease, color var(--transition-theme) ease;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
