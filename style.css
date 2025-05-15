@@ -94,3 +94,50 @@ img {
     display: block;
 }
 
+
+body.dark-mode {
+    --bg-color: var(--color-dark-bg);
+    --card-color: var(--color-dark-card);
+    --text-color: var(--color-dark-text);
+    --text-muted-color: var(--color-dark-text-muted);
+    --heading-color: var(--color-accent1);
+    --shadow-color: var(--color-dark-shadow);
+    --header-bg: rgba(1, 30, 55, 0.85);
+    --current-border-color: var(--color-dark-border);
+    --current-section-even-bg: var(--color-dark-section-even-bg);
+    --current-footer-bg: var(--color-dark-footer-bg);
+    --current-tech-badge-bg: var(--color-dark-tech-badge-bg);
+    --current-focus-glow-color: var(--color-dark-focus-glow);
+}
+
+body.dark-mode .cta-button {
+    color: var(--color-dark-bg);
+}
+
+body:not(.dark-mode) .cta-button {
+    color: var(--color-light-bg);
+}
+
+body.dark-mode .hero-profile-pic {
+    border-color: var(--accent-color);
+}
+
+body.dark-mode .hero-content h1 {
+    color: var(--text-color);
+}
+
+body.dark-mode .hero-role {
+    color: var(--accent-color);
+}
+
+body.dark-mode .hero-tagline {
+    color: var(--text-muted-color);
+}
+
+body.dark-mode #contact-form input[type="text"],
+body.dark-mode #contact-form input[type="email"],
+body.dark-mode #contact-form textarea {
+    background-color: var(--color-dark-card);
+    border-color: var(--current-border-color);
+}
+
